@@ -2,14 +2,14 @@ The raw data for this project were obtained from the Human Activity Recognition 
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip.
 
 The following files were used to create "tidydataset.txt":
-features.txt (this file contains the variable names that were used to label the tidy dataset)
-activity_labels.txt (this file contains the definition of the numeric activity labels)
-y_text.txt (within the folder named 'test')
-X_test.txt (within the folder named 'test')
-subject_test.txt (within the folder named 'test')
-y_train.txt (within the folder named 'train')
-X_train.txt (within the folder named 'train')
-subject_train.txt (within the folder named 'train')
+* features.txt (this file contains the variable names that were used to label the tidy dataset)
+* activity_labels.txt (this file contains the definition of the numeric activity labels)
+* y_text.txt (within the folder named 'test')
+* X_test.txt (within the folder named 'test')
+* subject_test.txt (within the folder named 'test')
+* y_train.txt (within the folder named 'train')
+* X_train.txt (within the folder named 'train')
+* subject_train.txt (within the folder named 'train')
 
 First, the test and train data were labeled and combined into a single dataset.
 Then, the dataset was subsetted to contain only the mean and standard deviation measurements.
@@ -17,9 +17,9 @@ Then, the activity labels were changed from numeric (1-6) to strings, based on t
 Finally, the data were summarized by calculating the means of the subsetted variables for each subject and activity.
 
 Data Dictionary for tidydataset.txt:
-subjectID: integers from 1 to 30, corresponding to the 30 volunteers within an age bracket of 19-48 years
-activity: one of six activities of daily living (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING)
-remaining columns: the mean of all mean and std measurements for each subject and activity
+* subjectID: integers from 1 to 30, corresponding to the 30 volunteers within an age bracket of 19-48 years
+* activity: one of six activities of daily living (WALKING, WALKING UPSTAIRS, WALKING DOWNSTAIRS, SITTING, STANDING, LAYING)
+* remaining columns: the mean of all mean and std measurements for each subject and activity
 
 Note: The original dataset was normalized and bounded within [-1,1]; therefore, all of the means reported in tidydataset are unitless and bounded within [-1,1].
 
@@ -36,40 +36,40 @@ Finally a Fast Fourier Transform (FFT) was applied to some of these signals prod
 These signals were used to estimate variables of the feature vector for each pattern:  
 '-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 
-tBodyAcc-XYZ
-tGravityAcc-XYZ
-tBodyAccJerk-XYZ
-tBodyGyro-XYZ
-tBodyGyroJerk-XYZ
-tBodyAccMag
-tGravityAccMag
-tBodyAccJerkMag
-tBodyGyroMag
-tBodyGyroJerkMag
-fBodyAcc-XYZ
-fBodyAccJerk-XYZ
-fBodyGyro-XYZ
-fBodyAccMag
-fBodyAccJerkMag
-fBodyGyroMag
-fBodyGyroJerkMag
+* tBodyAcc-XYZ
+* tGravityAcc-XYZ
+* tBodyAccJerk-XYZ
+* tBodyGyro-XYZ
+* tBodyGyroJerk-XYZ
+* tBodyAccMag
+* tGravityAccMag
+* tBodyAccJerkMag
+* tBodyGyroMag
+* tBodyGyroJerkMag
+* fBodyAcc-XYZ
+* fBodyAccJerk-XYZ
+* fBodyGyro-XYZ
+* fBodyAccMag
+* fBodyAccJerkMag
+* fBodyGyroMag
+* fBodyGyroJerkMag
 
 The set of variables that were estimated from these signals are: 
 
-mean(): Mean value
-std(): Standard deviation
-mad(): Median absolute deviation 
-max(): Largest value in array
-min(): Smallest value in array
-sma(): Signal magnitude area
-energy(): Energy measure. Sum of the squares divided by the number of values. 
-iqr(): Interquartile range 
-entropy(): Signal entropy
-arCoeff(): Autorregresion coefficients with Burg order equal to 4
-correlation(): correlation coefficient between two signals
-maxInds(): index of the frequency component with largest magnitude
-meanFreq(): Weighted average of the frequency components to obtain a mean frequency
-skewness(): skewness of the frequency domain signal 
-kurtosis(): kurtosis of the frequency domain signal 
-bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
-angle(): Angle between to vectors.
+* mean(): Mean value
+* std(): Standard deviation
+* mad(): Median absolute deviation 
+* max(): Largest value in array
+* min(): Smallest value in array
+* sma(): Signal magnitude area
+* energy(): Energy measure. Sum of the squares divided by the number of values. 
+* iqr(): Interquartile range 
+* entropy(): Signal entropy
+* arCoeff(): Autorregresion coefficients with Burg order equal to 4
+* correlation(): correlation coefficient between two signals
+* maxInds(): index of the frequency component with largest magnitude
+* meanFreq(): Weighted average of the frequency components to obtain a mean frequency
+* skewness(): skewness of the frequency domain signal 
+* kurtosis(): kurtosis of the frequency domain signal 
+* bandsEnergy(): Energy of a frequency interval within the 64 bins of the FFT of each window.
+* angle(): Angle between to vectors.
