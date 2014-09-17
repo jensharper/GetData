@@ -14,7 +14,7 @@ Descriptions of the variables were provided with the raw data in the file "featu
 
 Next, Step 1 is accomplished using cbind and rbind.
 
-Then, Step 2 is accomplished using regular expressions (regexpr). 
+Then, Step 2 is accomplished using regular expressions (grep). 
 86 column names were identified as containing "mean" or "std".
 The indices corresponding to these column names are used to subset the data.
 
