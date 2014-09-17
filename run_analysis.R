@@ -19,8 +19,8 @@ train_data <- cbind(subject_train, y_train, x_train)
 data <- rbind(test_data, train_data)
 
 # identify indices of column names that contain "mean" or "std"
-meanANDstd <- which(regexpr("mean", col_names, ignore.case=TRUE) > -1 | 
-                    regexpr("std", col_names, ignore.case=TRUE) > -1)
+meanANDstd <- union(grep("mean", col_names, ignore.case=TRUE), 
+                    grep("std", col_names, ignore.case=TRUE))
 
 # adjust indices to account for subjectID and activity columns (columns 1 and 2)
 adj <- meanANDstd + 2 # shift indices by two
